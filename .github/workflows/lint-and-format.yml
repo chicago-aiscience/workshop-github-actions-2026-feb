@@ -1,4 +1,4 @@
-name: Lint and Format
+name: (Internal) Lint and format
 
 on:
     workflow_call:

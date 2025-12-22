@@ -1,4 +1,4 @@
-name: Scan
+name: (Internal) Scan
 
 on:
   workflow_call:

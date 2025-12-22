@@ -18,7 +18,7 @@ env:
 
 jobs:
   lint-and-format:
-    name: Lint and format
+    name: Lint + format
     uses: ./.github/workflows/lint-and-format.yml
 
   scan:
@@ -33,18 +33,18 @@ jobs:
     name: Compute version
     uses: ./.github/workflows/version.yml
 
-  build-and-deploy:
+  container:
     name: Build + deploy container image
     needs: [lint-and-format, scan, test, version]
     if: needs.version.result == 'success'
-    uses: ./.github/workflows/build-and-deploy.yml
+    uses: ./.github/workflows/container.yml
     with:
       app_version: ${{ needs.version.outputs.app_version }}
     secrets: inherit
 
   release:
     name: Tag + GitHub release
-    needs: [version, build-deploy]
+    needs: [version, container]
     if: needs.version.result == 'success'
     uses: ./.github/workflows/release.yml
     with:

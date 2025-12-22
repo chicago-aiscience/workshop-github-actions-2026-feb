@@ -1,4 +1,4 @@
-name: Version
+name: (Internal) Compute version
 
 on:
   workflow_call:

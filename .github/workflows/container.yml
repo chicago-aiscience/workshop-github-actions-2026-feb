@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: (Internal) Build container
 
 on:
     workflow_call:
@@ -13,7 +13,7 @@ permissions:
     packages: write
 
 jobs:
-  build-deploy:
+  container:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
