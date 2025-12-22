@@ -1,4 +1,4 @@
-name: Lint, Test, Build and Deploy SST
+name: Deploy
 
 on:
   push:

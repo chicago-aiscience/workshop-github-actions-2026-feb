@@ -1,4 +1,4 @@
-name: Reusable - Tag and GitHub release
+name: Release
 
 on:
   workflow_call:
