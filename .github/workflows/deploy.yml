@@ -16,6 +16,11 @@ env:
   REGISTRY: ghcr.io
   RESOURCE_NAME_DOCKER: ${{ github.repository }}
 
+permissions:
+  contents: read
+  security-events: write
+  packages: write
+
 jobs:
   lint-and-format:
     name: Lint + format
