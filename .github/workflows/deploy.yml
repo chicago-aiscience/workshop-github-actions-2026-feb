@@ -22,3 +22,7 @@ jobs:
     if: needs.version.result == 'success'
     with:
       app_version: ${{ needs.version.outputs.app_version }}
+
+  test:
+    name: Tests
+    uses: ./.github/workflows/test.yml
