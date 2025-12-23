@@ -16,7 +16,7 @@ jobs:
           version: "latest"
 
       - name: Install
-        run: uv sync --extra dev
+        run: uv sync
 
       - name: Execute tests
         run: uv run pytest -q
