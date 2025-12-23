@@ -19,7 +19,7 @@ jobs:
           version: "latest"
 
       - name: Install
-        run: uv sync --extra dev
+        run: uv sync
 
       - name: Run ruff check
         run: uv run ruff check .
