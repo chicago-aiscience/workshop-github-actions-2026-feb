@@ -15,6 +15,15 @@ jobs:
     name: Compute version
     uses: ./.github/workflows/version.yml
 
+  test:
+    name: Tests
+    uses: ./.github/workflows/test.yml
+
+  download-artifacts:
+    name: Download test artifacts
+    needs: test
+    uses: ./.github/workflows/download-artifact.yml
+
   release:
     name: Release version
     uses: ./.github/workflows/release.yml
@@ -22,7 +31,3 @@ jobs:
     if: needs.version.result == 'success'
     with:
       app_version: ${{ needs.version.outputs.app_version }}
-
-  test:
-    name: Tests
-    uses: ./.github/workflows/test.yml
