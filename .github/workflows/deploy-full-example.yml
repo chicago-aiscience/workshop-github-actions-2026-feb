@@ -50,7 +50,7 @@ jobs:
   release:
     name: Tag + GitHub release
     needs: [version, container]
-    if: needs.version.result == 'success'
+    if: needs.version.result == 'success' && needs.version.outputs.app_version != ''
     uses: ./.github/workflows/release.yml
     with:
       app_version: ${{ needs.version.outputs.app_version }}
