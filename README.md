@@ -1,16 +1,22 @@
 # SST — Sea Surface Temperature & ENSO Prediction
 
-[![status](https://img.shields.io/badge/status-teaching%20demo-blue)](#status)
-[![python](https://img.shields.io/badge/python-3.10%2B-brightgreen)](#installation)
-[![license](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
-[![DOI](https://zenodo.org/badge/1087330899.svg)](https://doi.org/10.5281/zenodo.17613101)
-[![CI/CD](https://github.com/chicago-aiscience/workshop-sst/actions/workflows/deploy.yml/badge.svg)](https://github.com/chicago-aiscience/workshop-sst/actions/workflows/deploy.yml)
-
 SST is a lightweight Python package and CLI (published as `sst`) that demonstrates machine learning prediction of ENSO from Sea Surface Temperature data. It is designed as a workshop to serve as a quick example of ML workflows using monthly Sea Surface Temperature (SST) and ENSO (Niño 3.4) data. The project emphasizes repeatable pipelines, documentation, testing, and CI/CD habits.
 
-## Status
+## Relationship to the Workshop and Full Example Repository
 
-This project is maintained as a teaching demo. Expect stability in the CLI and dataset formats, with occasional updates to support workshops and best-practice examples.
+This repository is a **simplified derivative** of the larger example repository
+[`chicago-aiscience/workshop-sst`](https://github.com/chicago-aiscience/workshop-sst).
+
+The `workshop-sst` repository represents a more complete scientific software and workflow example, including additional automation, configuration, and real-world structure. While valuable, that level of complexity can obscure the core concepts when first learning GitHub Actions.
+
+For the purposes of the workshop, this repository was created to:
+
+- Reduce cognitive overhead while learning GitHub Actions
+- Isolate key CI/CD patterns relevant to scientific workflows
+- Provide a controlled environment for experimentation
+- Focus on *how* workflows work, not *how much* they can do
+
+Throughout the workshop, concepts introduced here can be mapped directly back to the patterns used in the full `workshop-sst` repository. The intent is that participants leave with a clear mental model they can then apply to more complex, real-world scientific codebases.
 
 ## Features
 
